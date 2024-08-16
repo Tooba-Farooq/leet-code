@@ -1,0 +1,11 @@
+class Solution:
+    def lengthOfLastWord(self, s: str) -> int:
+        rev_s = s.strip()
+        count = 0
+
+        for i in range(len(rev_s)-1, -1, -1):
+            if rev_s[i] == " ":
+                break
+            else:
+                count += 1
+        return count
